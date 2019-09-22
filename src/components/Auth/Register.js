@@ -10,7 +10,7 @@ class Register extends React.Component {
         password: '',
         passwordConfirmation: '',
         errors: [],
-        laoding: false,
+        loading: false,
         userRef: firebase.database().ref('users')
     };
     handleChange = event => {
@@ -64,7 +64,7 @@ class Register extends React.Component {
                     console.log(createdUser);
                     createdUser.user.updateProfile({
                         displayName: this.state.username,
-                        photoURL: `https://gravatar.com/avatar/${m5(createdUser.user.email)}?d=identicon`
+                        photoURL: `https://gravatar.com/avatar/${md5(createdUser.user.email)}?d=identicon`
                     }).then(()=>{
                        this.saveUser(createdUser).then(()=>{
                            // this.state({loading: false});
