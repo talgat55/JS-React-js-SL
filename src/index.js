@@ -6,6 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
+import 'semantic-ui-css/semantic.min.css'
+
 ReactDOM.render(
     <Router>
         <Switch>
