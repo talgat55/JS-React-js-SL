@@ -25,25 +25,36 @@ class Root extends React.Component {
                     this.props.setUser(user);
                     this.props.history.push("/")
                 }else{
-                    this.props.history.push('/login');
-                    this.props.clearUser();
+                    // this.props.history.push('/login');
+                    // this.props.clearUser();
                 }
             })
     }
 
+    // render() {
+    //     return this.props.isLoading ?
+    //         <Spinner/>
+    //         :
+    //         (
+    //
+    //             <Switch>
+    //                 <Route exact path="/" component={App}/>
+    //                 <Route path="/login" component={Login}/>
+    //                 <Route path="/register" component={Register}/>
+    //             </Switch>
+    //
+    //         )
+    // }
     render() {
-        return this.props.isLoading ?
-            <Spinner/>
-            :
-            (
+        return(
 
                 <Switch>
                     <Route exact path="/" component={App}/>
                     <Route path="/login" component={Login}/>
                     <Route path="/register" component={Register}/>
                 </Switch>
+        )
 
-            )
     }
 
 
